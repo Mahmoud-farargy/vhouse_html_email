@@ -1,0 +1,614 @@
+@import url("../Assets/fonts/fonts.css");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-clr:#f7c80f;
+  --secondary-clr: #000000;
+  --ultra-white: #fff;
+  --black-font: #333333;
+  --font-size-xsm: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 19px;
+  --font-size-xlg: 21px;
+  --font-size-xxlg: 30px;
+  --font-size-xxxlg: 48px;
+  --font-weight-sm: 400;
+  --font-weight-md: 500;
+  --font-weight-lg: 700;
+  --font-weight-xlg: 900;
+  --font-logo: instaLogo;
+  --border-main: 1px solid rgb(41, 41, 41);
+  --little-transition: all 200ms linear;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+}
+
+strong {
+  line-height: 19.6px;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#email {
+  background-color: #f0f2f5;
+  min-width: 320px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#email .email--inner {
+  min-width: 320;
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: var(--ultra-white);
+}
+
+#email .email--inner .shop--btn {
+  margin-top: 10px;
+  text-align: center;
+  padding: 12px 25px 10px;
+  color: var(--primary-clr);
+  font-size: var(--font-size-xsm);
+  font-weight: var(--font-weight-lg);
+  border: 1px solid var(--secondary-clr);
+  background-color: var(--secondary-clr);
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: var(--little-transition);
+  transition: var(--little-transition);
+}
+
+#email .email--inner .shop--btn:hover {
+  letter-spacing: 0.5px;
+}
+
+#email .email--inner #header {
+  padding: 15px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--secondary-clr);
+  border-bottom: var(--border-main);
+  color: var(--ultra-white);
+}
+
+#email .email--inner #header h4 {
+  margin-bottom: 0;
+  font-size: var(--font-size-lg);
+}
+
+#email .email--inner #header .email--logo {
+  font-family: var(--font-logo);
+  font-size: var(--font-size-xxlg);
+  font-weight: var(--font-weight-lg);
+}
+
+#email .email--inner #header nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#email .email--inner #header nav ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+#email .email--inner #header nav ul li {
+  text-transform: capitalize;
+  font-size: var(--font-size-xsm);
+  line-height: 19.6px;
+  margin-right: 8px;
+}
+
+#email .email--inner #header nav ul li::after {
+  content: "|";
+  margin-left: 6px;
+}
+
+#email .email--inner #header nav ul li:last-of-type::after {
+  content: "";
+  width: 0;
+  display: none;
+}
+
+#email .email--inner #emailHero {
+  overflow: hidden;
+  position: relative;
+  background-color: var(--ultra-white);
+  padding: 0;
+}
+
+#email .email--inner #emailHero img.hero--img {
+  width: 100%;
+  min-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  float: none;
+  display: inline-block;
+  padding-bottom: 15px;
+  background-color: var(--secondary-clr);
+}
+
+#email .email--inner #emailHero .hero--title {
+  background-color: var(--secondary-clr);
+  color: var(--ultra-white);
+  text-align: center;
+  border-top: var(--border-main);
+  border-bottom: var(--border-main);
+  padding: 10px;
+}
+
+#email .email--inner #emailHero .hero--title h5 {
+  margin-bottom: 0;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+}
+
+#email .email--inner #emailHero img.hero--bar {
+  background-color: var(--secondary-clr);
+  background-color: var(--secondary-clr);
+  width: 100%;
+  padding: 15px 0 0;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#email .email--inner #emailHero .hero--sale {
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 20px 10px;
+  padding: 10px 20px 30px;
+  background-color: var(--primary-clr);
+}
+
+#email .email--inner #emailHero .hero--sale h3 {
+  color: var(--secondary-clr);
+  text-transform: uppercase;
+  font-size: var(--font-size-xxlg);
+  font-weight: var(--font-weight-lg);
+  margin-bottom: 20px;
+}
+
+#email .email--inner #emailHero .hero--sale strong {
+  text-transform: capitalize;
+  border: 2px solid var(--secondary-clr);
+  padding: 10px 20px;
+  font-weight: var(--font-weight-lg);
+  font-size: var(--font-size-md);
+}
+
+#email .email--inner #emailHero .hero--sale .black--friday, #email .email--inner #emailHero .hero--sale .cyber--monday {
+  text-align: center;
+}
+
+#email .email--inner #emailHero .hero--sale .black--friday strong {
+  background-color: var(--secondary-clr);
+  color: var(--ultra-white);
+}
+
+#email .email--inner #emailHero .hero--sale .cyber--monday strong {
+  background: transparent;
+}
+
+#email .email--inner #emailHero .hero--skew--effect {
+  background-color: var(--primary-clr);
+  width: 100%;
+  height: 45px;
+  margin-top: -12px;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  margin-bottom: 10px;
+}
+
+#email .email--inner #emailBody {
+  background-color: var(--ultra-white);
+}
+
+#email .email--inner #emailBody .sale--showcase .sale--titles {
+  margin: 25px 5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--black-font);
+}
+
+#email .email--inner #emailBody .sale--showcase .sale--titles h3 {
+  line-height: 67.2px;
+  font-size: var(--font-size-xxxlg);
+  font-weight: var(--font-weight-lg);
+  margin-bottom: 3px;
+}
+
+#email .email--inner #emailBody .sale--showcase .sale--titles h5 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-lg);
+}
+
+#email .email--inner #emailBody .products {
+  padding: 25px 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 20px 4px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+#email .email--inner #emailBody .products .product {
+  text-align: center;
+  padding: 0 14px 10px;
+}
+
+#email .email--inner #emailBody .products .product h4 {
+  padding: 10px;
+  margin: auto;
+  width: 70%;
+  overflow: hidden;
+  color: var(--black-font);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-lg);
+  text-transform: uppercase;
+  background-color: var(--primary-clr);
+  line-height: 120%;
+  max-width: 120px;
+}
+
+#email .email--inner #emailBody .products .product img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 189px;
+  float: none;
+  clear: both;
+  display: inline-block;
+}
+
+#email .email--inner #emailBody .products .product .deduction {
+  font-size: var(--font-size-md);
+  margin: 15px 5px;
+  text-decoration: line-through;
+  color: #808080;
+}
+
+#email .email--inner #emailBody .products .product strong.total--price {
+  display: block;
+  font-size: 25px;
+  font-weight: var(--font-weight-lg);
+}
+
+#email .email--inner #emailBody .limited--time--notice, #email .email--inner #emailBody #exclusiveToday {
+  padding: 20px 0 30px;
+}
+
+#email .email--inner #emailBody .limited--time--notice h4, #email .email--inner #emailBody #exclusiveToday h4 {
+  text-align: center;
+  color: var(--secondary-clr);
+  font-weight: var(--font-weight-sm);
+  font-size: 28px;
+  line-height: 39.2px;
+}
+
+#email .email--inner #emailBody .limited--time--notice p, #email .email--inner #emailBody #exclusiveToday p {
+  word-break: break-word;
+  margin: 0 auto;
+  width: 80%;
+  font-size: var(--font-size-md);
+  line-height: 25.6px;
+  color: var(--black-font);
+}
+
+#email .email--inner #emailBody #moreSale {
+  width: 100%;
+  background-color: var(--primary-clr);
+  padding: 0;
+  margin: 30px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#email .email--inner #emailBody #moreSale .more--sale--item .more--sale--item--info {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+#email .email--inner #emailBody #moreSale .more--sale--item .more--sale--item--info h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-lg);
+}
+
+#email .email--inner #emailBody #moreSale .more--sale--item .more--sale--item--info .shop--btn {
+  display: inline-block;
+  justify-self: flex-end;
+}
+
+#email .email--inner #emailBody #moreSale .more--sale--item img {
+  height: 100%;
+  max-width: 108px;
+}
+
+#email .email--inner #emailBody #exclusiveToday {
+  width: 95%;
+  padding: 20px;
+}
+
+#email .email--inner #emailBody #exclusiveToday h4, #email .email--inner #emailBody #exclusiveToday p {
+  text-align: end;
+  width: 100%;
+}
+
+#email .email--inner #emailBody #salePreview {
+  width: 100%;
+  padding: 20px 5px;
+}
+
+#email .email--inner #emailBody #salePreview .sale--preview--inner {
+  margin: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+#email .email--inner #emailBody #salePreview .sale--preview--inner div {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+
+#email .email--inner #emailBody #salePreview .sale--preview--inner .sale--preview--percentage {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#email .email--inner #emailBody #salePreview .sale--preview--inner .sale--preview--percentage h2 {
+  text-transform: uppercase;
+  color: var(--primary-clr);
+  font-size: 38px;
+  line-height: 70.4px;
+  font-weight: var(--font-weight-lg);
+  margin-bottom: 4px;
+}
+
+#email .email--inner #emailBody #salePreview .sale--preview--inner img {
+  max-width: 197px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#email .email--inner footer#footer {
+  margin-top: 40px;
+  background-color: var(--secondary-clr);
+}
+
+#email .email--inner footer#footer .footer-skew--effect {
+  background-color: var(--secondary-clr);
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  width: 100%;
+  height: 30px;
+  margin-top: -12px;
+  margin-bottom: 10px;
+}
+
+#email .email--inner footer#footer .upper--footer {
+  padding: 0 20px 20px;
+  color: var(--ultra-white);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+#email .email--inner footer#footer .upper--footer span.sale--info {
+  text-align: right;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  font-size: 24px;
+  line-height: 33.6px;
+  font-weight: var(--font-weight-sm);
+  padding: 1px 35px 0px;
+}
+
+#email .email--inner footer#footer .upper--footer span.sale--info .price-emphasize {
+  text-transform: uppercase;
+  color: var(--primary-clr);
+}
+
+#email .email--inner footer#footer .upper--footer span.shop--btn {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  display: inline;
+  background-color: var(--primary-clr);
+  color: var(--secondary-clr);
+}
+
+#email .email--inner footer#footer .links--footer {
+  background-color: var(--primary-clr);
+  padding: 4px 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#email .email--inner footer#footer .links--footer h5 {
+  font-size: var(--font-size-md);
+  line-height: 22.4px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--secondary-clr);
+}
+
+#email .email--inner footer#footer .links--footer .socials ul {
+  margin-top: 5px;
+}
+
+#email .email--inner footer#footer .links--footer .socials ul li {
+  margin-right: 10px;
+}
+
+#email .email--inner footer#footer .links--footer .socials ul li img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#email .email--inner footer#footer .links--footer .link--div {
+  padding: 11px 10px;
+}
+
+#email .email--inner footer#footer .links--footer .link--div ul {
+  padding: 0;
+}
+
+#email .email--inner footer#footer .links--footer .link--div ul li p {
+  margin-bottom: 3px;
+  font-size: var(--font-size-sm);
+}
+
+#email .email--inner footer#footer .footer--copyright {
+  padding: 15px 20px;
+  background-color: var(--secondary-clr);
+  font-size: var(--font-size-sm);
+  color: #95a5a6;
+}
+
+@media screen and (max-width: 670px) {
+  #email {
+    padding: 0;
+  }
+  #email .more--sale--item {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    margin: 0 auto;
+  }
+  #email .email--inner #header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    gap: 15px;
+  }
+  #email .products, #email footer#footer .links--footer {
+    -ms-grid-columns: 100% !important;
+        grid-template-columns: 100% !important;
+  }
+  #email #moreSale {
+    padding: 0px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+  }
+  #email #moreSale .more--sale--item {
+    padding-bottom: 20px;
+  }
+  #email #moreSale .more--sale--item img {
+    max-width: none !important;
+    width: 100%;
+  }
+  #email #salePreview .sale--preview--inner .sale--preview--percentage h2 {
+    font-size: 30px !important;
+  }
+  #email #salePreview .sale--preview--inner div {
+    width: 100%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  #email #salePreview .sale--preview--inner div img {
+    width: 100%;
+    text-align: center;
+    max-width: none !important;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  #email footer#footer .upper--footer span.sale--info {
+    text-align: center !important;
+  }
+  #email .hero--sale, #email .email--inner #header, #email #moreSale, #email #salePreview .sale--preview--inner, #email footer#footer .upper--footer {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  #email .limited--time--notice p {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #email #exclusiveToday {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
